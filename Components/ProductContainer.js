@@ -35,12 +35,13 @@ export default function ProductContainer({ products }) {
             <Slide direction='up' in={true}>
               <a href={`/product/${product.permalink}`}>
                 <div>
-                  <img src={product.image.url} />
+                  <img src={product.image.url} loading='lazy' />
                 </div>
 
                 <div>
                   <p>{product.name}</p>
                   <p>{product.price.formatted_with_symbol}</p>
+
                   <button>Shop Now</button>
                 </div>
               </a>
