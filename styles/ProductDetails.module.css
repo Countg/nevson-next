@@ -89,7 +89,9 @@
   }
 
   .sizeChart {
-    background-size: cover;
-    height: 50%;
+    background-size: 350px 350px;
+    background-position: center;
+    width: 50%;
+    height: 400px;
   }
 }

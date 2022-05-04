@@ -64,18 +64,31 @@
 }
 
 @media (min-width: 600px) {
+  .productContainer {
+    width: 70%;
+    margin: 0 auto;
+  }
   .productDetails {
     margin: 2em auto;
   }
 }
 
 @media (min-width: 1076px) {
+  .productContainer {
+    width: 70%;
+    margin: 0 auto;
+  }
+
   .productButton {
     width: 30%;
   }
 }
 
 @media (max-width: 1075px) and (min-width: 1024px) {
+  .productContainer {
+    width: 65%;
+    margin: 0 auto;
+  }
   .productButton {
     width: 40%;
   }
