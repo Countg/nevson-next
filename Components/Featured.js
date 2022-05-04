@@ -18,7 +18,7 @@ import styles from '../styles/Home.module.css';
 
 export default function Featured({ featured }) {
   return (
-    <>
+    <div className={styles.featuredContainer}>
       <Divider>
         <Typography
           className='headline'
@@ -48,6 +48,6 @@ export default function Featured({ featured }) {
           <ButtonNext>Next</ButtonNext>
         </div>
       </CarouselProvider>
-    </>
+    </div>
   );
 }

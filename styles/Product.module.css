@@ -1,10 +1,5 @@
 .productContainer {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  display: grid;
-  grid-gap: 0.2rem;
-  color: black;
+  display: block;
 }
 
 .productDetails {
@@ -69,11 +64,6 @@
 }
 
 @media (min-width: 600px) {
-  .productContainer {
-    width: 60%;
-    min-height: 100%;
-  }
-
   .productDetails {
     margin: 2em auto;
   }

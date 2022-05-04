@@ -17,11 +17,8 @@ export default function Home({ productsPerCategory, featured }) {
       <AboutContainer />
       <ProductDisplay categories={productsPerCategory} />
       <ShippingContainer />
-      <div className={styles.productContainer}>
-        <div className={styles.productDetails}>
-          <Featured featured={featured} />
-        </div>
-      </div>
+
+      <Featured featured={featured} />
     </Layout>
   );
 }

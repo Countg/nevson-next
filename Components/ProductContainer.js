@@ -24,7 +24,6 @@ export default function ProductContainer({ products }) {
           Contact us here
         </span>
       </a>
-      !
     </Typography>
   );
 
