@@ -73,7 +73,7 @@ export default function ProductDetails({ product, featured }) {
       <div>
         <div className={styles.productDetailsContainer}>
           <div className={styles.productDetailsImage}>
-            <img src={product.image.url} />
+            <img src={product.image.url} loading='lazy' />
           </div>
 
           {/* Details container */}
