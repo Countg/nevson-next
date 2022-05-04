@@ -1,0 +1,30 @@
+.footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 2em 2em;
+  background-color: #4c4b62;
+  color: #ffff;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2em 0.5em;
+}
+
+.socials {
+  margin: 0 0.2em;
+  cursor: pointer;
+  font-size: 2em;
+  transition: all 0.3s ease;
+}
+
+.socials:hover {
+  color: #e3d4b7;
+  transform: translateY(-0.25em);
+}

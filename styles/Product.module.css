@@ -1,0 +1,92 @@
+.productContainer {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 0.2rem;
+  color: black;
+}
+
+.productDetails {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  color: black;
+}
+
+.productButton {
+  background: none;
+  border: 2px solid;
+  width: 95%;
+  font: inherit;
+  font-family: 'Lato';
+  font-size: 1em;
+  line-height: 1;
+  margin: 2em auto;
+  padding: 0.8em 2em;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.productButton:hover,
+.productButton:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.paginationBttns {
+  margin: 2em 0;
+  padding: 1em 0;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paginationBttns a {
+  border: none;
+  padding: 0.8em 1em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-position: under;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #e3d4b7;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: #e3d4b7;
+  text-decoration: none;
+}
+
+@media (min-width: 600px) {
+  .productContainer {
+    width: 60%;
+    min-height: 100%;
+  }
+
+  .productDetails {
+    margin: 2em auto;
+  }
+}
+
+@media (min-width: 1076px) {
+  .productButton {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1075px) and (min-width: 1024px) {
+  .productButton {
+    width: 40%;
+  }
+}

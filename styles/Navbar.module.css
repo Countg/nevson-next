@@ -1,0 +1,23 @@
+.mainNav {
+  background-color: #4c4b62;
+  padding: 0.8em 0;
+}
+
+.navBar {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #34495e;
+}
+
+.logo {
+  background-image: url('/logos/Sewing\ machine\ icon\ transparent\ .png');
+  height: 40px;
+  width: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 150px;
+  cursor: pointer;
+}

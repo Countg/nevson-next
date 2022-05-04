@@ -1,116 +1,439 @@
-.container {
-  padding: 0 2rem;
+.productButton {
+  background: none;
+  border: 2px solid;
+  width: 95%;
+  font: inherit;
+  font-family: 'Lato';
+  font-size: 1em;
+  line-height: 1;
+  margin: 2em auto;
+  padding: 0.8em 2em;
+  box-shadow: 3px 3px gray;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
 }
-
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+/* Header */
+.masksContainer {
+  min-height: 10vh;
+  margin: 2em auto;
+  width: 95%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-.footer {
+.maskLogo {
+  min-height: 300px;
+  padding: 0;
+}
+
+.maskLogo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.maskDescription {
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
+  font-family: Lato;
+  min-height: 150px;
+  padding: 2em;
+  color: #696969;
   justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+  flex-direction: column;
   text-align: center;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.maskDescription button {
+  width: 40%;
+  margin: 0 auto;
+  border: 0;
+  cursor: pointer;
+  font-family: Lato;
+  padding: 0.5em 0.5em;
+  transition: 0.2s ease-in;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.maskDescription button:hover {
+  background-color: #7ba395;
 }
 
-.grid {
+.maskImage {
+  height: 200px;
+  background-color: #f1ded9;
+  background-image: url('/images/About\ us\ dogs\ pink.png');
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-position: -180px -50px;
+}
+
+/* Shipping bar */
+
+.mainContainer {
+  height: 20vh;
+  background-color: aliceblue;
+  margin: 0 auto;
+  margin-top: 5em;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.shippingContainer {
+  width: 95%;
+  text-align: center;
+  color: #696969;
+  font-family: Lumberjack;
+  font-size: 1rem;
+}
+.icon {
+  vertical-align: middle;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.topBanner {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+  align-items: center;
+  color: #696969;
+  font-size: 1em;
+  font-family: Lumberjack;
+  text-transform: uppercase;
 }
 
-.card h2 {
+/* body links */
+
+.productDisplayContainer {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+}
+
+.linkContainer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.linkDisplayOne,
+.linkDisplayTwo,
+.linkDisplayThree,
+.linkDisplayFour {
+  min-height: 300px;
+  cursor: pointer;
+}
+
+.linkDisplayOne img,
+.linkDisplayTwo img,
+.linkDisplayThree img,
+.linkDisplayFour img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.linkContainer button {
+  border: none;
+  padding: 0.8em 0;
+  font-size: 0.9375rem;
+  background-color: white;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-position: under;
+  cursor: pointer;
+  border-radius: 0;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
   margin: 0 0 1rem 0;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 1rem;
+  margin-left: 0px;
+  transition: 0.2s ease-in;
+}
+
+.linkContainer button:hover {
+  text-decoration: none;
+  background-color: #f1ded9;
+}
+
+.linkContainer h2 {
+  display: block;
+  font-weight: bold;
   font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin: 0 0 0.75rem 0;
+  margin-bottom: 0.75rem;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+/* Product category */
+
+.productCategoryContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 1em;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.productCategoryContainer img {
+  width: 100%;
 }
 
-@media (max-width: 600px) {
-  .grid {
+.productCategoryContainer button {
+  border: none;
+  padding: 0.8em 0;
+  background-color: white;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-position: under;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.productCategoryContainer button:hover {
+  text-decoration: none;
+  background-color: #f1ded9;
+}
+
+/* Slider */
+.sliderComponent {
+  display: none;
+}
+
+/* desktop */
+@media (min-width: 1050px) {
+  .masksContainer {
+    min-height: 50vh;
+    margin: 2em auto;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .maskLogo {
+    background-position: -10px center;
+    background-size: cover;
+    height: 330px;
+    width: 450px;
+    align-self: center;
+  }
+
+  .maskDescription {
+    display: flex;
+    position: absolute;
+    min-height: 150px;
+
+    width: 35%;
+    left: 10%;
+    justify-content: center;
+  }
+
+  .maskDescription p {
+    text-align: center;
+  }
+  .maskDescription button {
+    width: 30%;
+  }
+
+  .maskImage {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+  }
+
+  .shippingContainer {
     width: 100%;
-    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .productDisplayContainer {
+    width: 70%;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .linkDisplayOne,
+  .linkDisplayTwo,
+  .linkDisplayThree,
+  .linkDisplayFour {
+    cursor: pointer;
+    height: 85%;
+  }
+
+  .linkDisplayOne img:hover,
+  .linkDisplayTwo img:hover,
+  .linkDisplayThree img:hover,
+  .linkDisplayFour img:hover {
+    transform: scale(1);
+  }
+
+  .productCategoryContainer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  /* Slider */
+  .sliderComponent {
+    margin: 2em 0;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sliderComponent button {
+    border: none;
+    padding: 0.8em 1em;
+
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-position: under;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+  }
+
+  .sliderComponent button:hover {
+    text-decoration: none;
+    background-color: #7ba395;
+    color: white;
+  }
+}
+
+/* ipad pro */
+
+@media (max-width: 1049px) and (min-width: 1020px) {
+  .masksContainer {
+    min-height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .maskImage {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .maskDescription {
+    width: 40%;
+    font-size: 0.6em;
+    left: 5%;
+    position: absolute;
+    text-align: left;
+  }
+  .maskDescription button {
+    width: 40%;
+  }
+
+  .maskLogo {
+    height: 100px;
+  }
+  .maskLogo img {
+    padding: 0;
+    object-fit: cover;
+  }
+
+  .maskImage {
+    justify-content: center;
+  }
+  .mainContainer {
+    height: 10vh;
+  }
+
+  .shippingContainer {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .productDisplayContainer {
+    margin: 0 auto;
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .linkDisplayOne,
+  .linkDisplayTwo,
+  .linkDisplayThree,
+  .linkDisplayFour {
+    height: 500px;
+  }
+
+  /* Slider */
+  .sliderComponent {
+    margin: 2em 0;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Ipad */
+
+@media (max-width: 1019px) and (min-width: 600px) {
+  .masksContainer {
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .maskDescription {
+    width: 50%;
+    font-size: 0.6em;
+    left: 2%;
+    position: absolute;
+    text-align: left;
+  }
+
+  .maskLogo {
+    height: 100px;
+  }
+
+  .maskLogo img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .maskDescription button {
+    width: 40%;
+  }
+  .maskImage {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+  }
+  .mainContainer {
+    height: 10vh;
+  }
+
+  .shippingContainer {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .productDisplayContainer {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .linkDisplayOne,
+  .linkDisplayTwo,
+  .linkDisplayThree,
+  .linkDisplayFour {
+    height: 85%;
   }
 }

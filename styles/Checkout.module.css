@@ -1,0 +1,26 @@
+.layout {
+  margin-top: 5%;
+  width: auto;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.paper {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 16px;
+}
+
+.stepper {
+  padding: 16px 0 40px;
+}
+
+.divider {
+  margin: 20px 0;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

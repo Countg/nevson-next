@@ -1,0 +1,23 @@
+.callContainer {
+  background-color: #f1ded9;
+  border: 1px solid black;
+  height: 30vh;
+  padding: 0.7em 0;
+  width: 100%;
+}
+
+.callToAction {
+  height: 30vh;
+  background-image: url('/images/Story\ banner\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .callToAction {
+    height: 250px;
+    background-size: 40%;
+  }
+}

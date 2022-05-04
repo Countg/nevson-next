@@ -1,0 +1,95 @@
+.productDetailsContainer {
+  display: grid;
+
+  width: 95%;
+  margin: 20em auto;
+}
+
+.productDetailsImage {
+  width: 95%;
+  margin: 1em auto;
+}
+
+.productDetailsImage img {
+  width: 100%;
+}
+
+.productDetailsInfo {
+  width: 95%;
+  min-height: 300px;
+  margin: 0 auto;
+}
+
+.statusContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.formContainer {
+  min-width: 80px;
+  margin-bottom: 2em;
+}
+
+.productDetailsInfo button {
+  border: none;
+  padding: 0.8em 0;
+  margin: 0.5em 0.5em;
+  background-color: white;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-position: under;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.productDetailsInfo button:hover {
+  text-decoration: none;
+  background-color: #f1ded9;
+}
+
+.featuredContainer {
+  display: none;
+}
+
+.sizeChart {
+  background-image: url('/images/Size\ guide\ .png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  height: 80%;
+  border: 1px solid black;
+}
+
+@media (min-width: 1050px) {
+  .productDetailsContainer {
+    display: grid;
+    width: 75%;
+    margin: 2em auto;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .productDetailsInfo {
+    margin: 1em;
+  }
+
+  .productDetailsImage {
+    width: 80%;
+  }
+}
+
+@media (min-width: 600px) {
+  .featuredContainer {
+    width: 60%;
+    display: block;
+    min-height: 100%;
+    margin: 0 auto;
+    display: grid;
+  }
+
+  .sizeChart {
+    background-size: cover;
+    height: 50%;
+  }
+}
