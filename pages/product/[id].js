@@ -69,98 +69,107 @@ export default function ProductDetails({ product, featured }) {
   );
 
   const renderProductById = () => (
-    <Layout title={`Nevson Masks - ${product.name}`}>
-      <div>
-        <div className={styles.productDetailsContainer}>
-          <div className={styles.productDetailsImage}>
-            <img src={product.image.url} loading='lazy' />
-          </div>
-
-          {/* Details container */}
-          <div className={styles.productDetailsInfo}>
-            <div>
-              <Typography
-                className='headline'
-                variant='h3'
-                style={{
-                  fontFamily: 'Lumberjack',
-                  textTransform: 'uppercase',
-                }}>
-                {product.name}
-              </Typography>
+    <Layout title={`Nevson Masks Products`}>
+      {!product ? (
+        <Typography> Waiting for product</Typography>
+      ) : (
+        <div>
+          <div className={styles.productDetailsContainer}>
+            <div className={styles.productDetailsImage}>
+              <img src={product.image.url} loading='lazy' />
             </div>
-            <div className={styles.statusContainer}>
-              <Typography variant='h6'>
-                {product.price.formatted_with_symbol}
-              </Typography>
 
-              {product.inventory.available > 0 ? (
-                <Alert icon={false} severity='success'>
-                  In Stock
-                </Alert>
-              ) : (
-                <Alert icon={false} severity='error'>
-                  Unavailable
-                </Alert>
+            {/* Details container */}
+            <div className={styles.productDetailsInfo}>
+              <div>
+                <Typography
+                  className='headline'
+                  variant='h3'
+                  style={{
+                    fontFamily: 'Lumberjack',
+                    textTransform: 'uppercase',
+                  }}>
+                  {product.name}
+                </Typography>
+              </div>
+              <div className={styles.statusContainer}>
+                <Typography variant='h6'>
+                  {product.price.formatted_with_symbol}
+                </Typography>
+
+                {product.inventory.available > 0 ? (
+                  <Alert icon={false} severity='success'>
+                    In Stock
+                  </Alert>
+                ) : (
+                  <Alert icon={false} severity='error'>
+                    Unavailable
+                  </Alert>
+                )}
+              </div>
+              <div>
+                <Typography
+                  variant='h6'
+                  style={{
+                    display: 'block',
+                    lineHeight: '80%',
+                    fontWeight: 'lighter',
+                  }}>
+                  Description:
+                </Typography>
+                <Box
+                  style={{ display: 'block', lineHeight: '30%' }}
+                  dangerouslySetInnerHTML={{
+                    __html: product.description,
+                  }}></Box>
+              </div>
+
+              <div>
+                <FormControl style={{ width: '30%', marginBottom: '2em' }}>
+                  <InputLabel id='demo-simple-select-label'>SIZE</InputLabel>
+                  <Select
+                    name={sizes.text}
+                    value={sizes.text}
+                    onChange={handleSize}>
+                    {sizes.map((option) => {
+                      return (
+                        <MenuItem
+                          labelId='demo-simple-select-label'
+                          id='demo-simple-select'
+                          label='Size'
+                          key={option.value}
+                          value={option.value}>
+                          {option.text}
+                        </MenuItem>
+                      );
+                    })}
+                  </Select>
+                </FormControl>
+              </div>
+              {product.categories.map((cat) =>
+                cat.name === 'Masks' ? (
+                  <div className={styles.sizeChart}></div>
+                ) : null
               )}
-            </div>
-            <div>
-              <Typography
-                variant='h6'
-                style={{
-                  display: 'block',
-                  lineHeight: '80%',
-                  fontWeight: 'lighter',
-                }}>
-                Description:
-              </Typography>
-              <Box
-                style={{ display: 'block', lineHeight: '30%' }}
-                dangerouslySetInnerHTML={{ __html: product.description }}></Box>
-            </div>
 
-            <div>
-              <FormControl style={{ width: '30%', marginBottom: '2em' }}>
-                <InputLabel id='demo-simple-select-label'>SIZE</InputLabel>
-                <Select
-                  name={sizes.text}
-                  value={sizes.text}
-                  onChange={handleSize}>
-                  {sizes.map((option) => {
-                    return (
-                      <MenuItem
-                        labelId='demo-simple-select-label'
-                        id='demo-simple-select'
-                        label='Size'
-                        key={option.value}
-                        value={option.value}>
-                        {option.text}
-                      </MenuItem>
-                    );
-                  })}
-                </Select>
-              </FormControl>
-            </div>
-            {product.categories.map((cat) =>
-              cat.name === 'Masks' ? (
-                <div className={styles.sizeChart}></div>
-              ) : null
-            )}
-
-            <div>
-              <button onClick={addToCart} role='button' disabled={!variantInfo}>
-                Add To Cart
-              </button>
-              <Link href='/'>
-                <button role='button'>Continue Shopping</button>
-              </Link>
+              <div>
+                <button
+                  onClick={addToCart}
+                  role='button'
+                  disabled={!variantInfo}>
+                  Add To Cart
+                </button>
+                <Link href='/'>
+                  <button role='button'>Continue Shopping</button>
+                </Link>
+              </div>
             </div>
           </div>
+          <div className={styles.featuredContainer}>
+            <Featured featured={featured} />
+          </div>
         </div>
-        <div className={styles.featuredContainer}>
-          <Featured featured={featured} />
-        </div>
-      </div>
+      )}
     </Layout>
   );
 
